@@ -1,3 +1,18 @@
 body {
   background-color: #7FDBFF;
 }
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+/*table {
+  border-spacing: 5px;
+}*/
+
+td {
+  text-align: center;
+  height: 200px;
+  width: 200px;
+}
