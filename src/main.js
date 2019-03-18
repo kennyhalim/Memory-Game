@@ -13,10 +13,15 @@ $(document).ready(function() {
     else if(action === 1){
       $("#" + this.id).text(memoryGame.cardValues[this.id - 1]);
     }
-    else{
+    else if(action === -1){
       alert(memoryGame.cardValues[this.id - 1] + " is under the card. It doesn't match.");
       $("#" + this.id).text("Card " + this.id);
       $("#" + memoryGame.firstClickId).text("Card " + memoryGame.firstClickId);
+    }
+    else {
+      $("#" + this.id).text(memoryGame.cardValues[this.id - 1]);
+      
+      alert("Congratulations, you won");
     }
   });
 });

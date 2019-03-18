@@ -3,8 +3,10 @@ export function Game() {
   this.counter = 0;
   this.firstClick = null;
   this.firstClickId = null;
+  this.correctCounter = 0;
 
   Game.prototype.makeMove = function(position){
+
     if(this.counter === 0){
       this.firstClick = this.cardValues[position - 1];
       this.firstClickId = position;
@@ -12,8 +14,13 @@ export function Game() {
       return 0;
     }
     else{
+      if(this.correctCounter === 9){
+        return 4;
+      }
       this.counter = 0;
       if(this.firstClick === this.cardValues[position - 1]){
+        this.correctCounter++;
+
         return 1;
       }
       else {
